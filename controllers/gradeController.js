@@ -25,16 +25,16 @@ const create = async (req, res) => {
 };
 
 const findAll = async (req, res) => {
-  /* const { name } = req.params; */
+  const { name } = req.query;
 
-  const student = await Student.find();
-
-  /* //condicao para o filtro no findAll
+  //condicao para o filtro no findAll
   var condition = name
     ? { name: { $regex: new RegExp(name), $options: 'i' } }
-    : { data }; */
+    : {};
 
   try {
+    const student = await Student.find(condition);
+
     res.send(student);
     logger.info(`GET /grade`);
   } catch (err) {
