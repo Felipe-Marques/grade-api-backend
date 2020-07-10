@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //Cors conectando com o Frontend
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://grade-app-frontend.herokuapp.com' }));
 
 //Rotas
 app.use(studentRouter);
