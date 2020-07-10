@@ -1,0 +1,22 @@
+{
+  "name": "grades-api",
+  "version": "1.0.0",
+  "description": "Aula para montar crud na api com os dados no mongoDB Atlas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --experimental-modules app.js"
+  },
+  "type": "module",
+  "author": "Felipe Marques",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "winston": "^3.3.3",
+    "winston-mongodb": "^5.0.1"
+  }
+}
