@@ -18,6 +18,6 @@ app.patch('/grade/:id', controller.update);
 
 //Endpoint Delete
 app.delete('/grade/:id', controller.remove);
-app.delete('/grade/clear', controller.removeAll);
+app.delete('/grade', controller.removeAll);
 
 export { app as studentRouter };
