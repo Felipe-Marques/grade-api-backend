@@ -25,7 +25,7 @@ const create = async (req, res) => {
 };
 
 const findAll = async (req, res) => {
-  const { name } = req.query;
+  const name = req.query.name;
 
   //condicao para o filtro no findAll
   var condition = name
@@ -46,7 +46,7 @@ const findAll = async (req, res) => {
 };
 
 const findOne = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params.id;
   try {
     const student = await Student.findById({ _id: id });
 
@@ -72,7 +72,7 @@ const update = async (req, res) => {
       .status(400)
       .send({ message: 'Dados para atualização inexistentes' });
 
-  const { id } = req.params;
+  const id = req.params.id;
 
   try {
     const student = await Student.findByIdAndUpdate({ _id: id }, req.body, {
@@ -90,7 +90,7 @@ const update = async (req, res) => {
 };
 
 const remove = async (req, res) => {
-  const { id } = req.params;
+  const id = req.params.id;
 
   try {
     const student = await Student.findByIdAndDelete({ _id: id });
